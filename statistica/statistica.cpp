@@ -16,7 +16,7 @@ void show_meas(double* meas, int num_meas) {
 		cout << ' ' << meas[i] << endl;
 	}
 }
-void average_meas(double sum_meas = 0.0, double avg_meas = 0.0, double* meas, int num_meas) {
+void average_meas(double* meas, int num_meas, double sum_meas = 0.0, double avg_meas = 0.0) {
 	for (int i = 0; i < num_meas; i++)
 	{
 		sum_meas = sum_meas + meas[i];
@@ -43,5 +43,6 @@ int main()
 		double* meas = new double[num_meas];
 		create_meas(meas, num_meas);
 		show_meas(meas, num_meas);
+		average_meas(meas, num_meas);
 	}
 }
